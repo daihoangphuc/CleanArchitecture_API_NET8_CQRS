@@ -1,0 +1,12 @@
+D:\@NET_API\CleanArchitecture.API\CleanArchitecture.Domain\bin\Debug\net8.0\CleanArchitecture.Domain.deps.json
+D:\@NET_API\CleanArchitecture.API\CleanArchitecture.Domain\bin\Debug\net8.0\CleanArchitecture.Domain.dll
+D:\@NET_API\CleanArchitecture.API\CleanArchitecture.Domain\bin\Debug\net8.0\CleanArchitecture.Domain.pdb
+D:\@NET_API\CleanArchitecture.API\CleanArchitecture.Domain\obj\Debug\net8.0\CleanArchitecture.Domain.csproj.AssemblyReference.cache
+D:\@NET_API\CleanArchitecture.API\CleanArchitecture.Domain\obj\Debug\net8.0\CleanArchitecture.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\@NET_API\CleanArchitecture.API\CleanArchitecture.Domain\obj\Debug\net8.0\CleanArchitecture.Domain.AssemblyInfoInputs.cache
+D:\@NET_API\CleanArchitecture.API\CleanArchitecture.Domain\obj\Debug\net8.0\CleanArchitecture.Domain.AssemblyInfo.cs
+D:\@NET_API\CleanArchitecture.API\CleanArchitecture.Domain\obj\Debug\net8.0\CleanArchitecture.Domain.csproj.CoreCompileInputs.cache
+D:\@NET_API\CleanArchitecture.API\CleanArchitecture.Domain\obj\Debug\net8.0\CleanArchitecture.Domain.dll
+D:\@NET_API\CleanArchitecture.API\CleanArchitecture.Domain\obj\Debug\net8.0\refint\CleanArchitecture.Domain.dll
+D:\@NET_API\CleanArchitecture.API\CleanArchitecture.Domain\obj\Debug\net8.0\CleanArchitecture.Domain.pdb
+D:\@NET_API\CleanArchitecture.API\CleanArchitecture.Domain\obj\Debug\net8.0\ref\CleanArchitecture.Domain.dll
