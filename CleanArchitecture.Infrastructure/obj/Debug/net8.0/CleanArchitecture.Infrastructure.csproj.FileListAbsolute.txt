@@ -17,3 +17,4 @@ D:\@NET_API\CleanArchitecture.API\CleanArchitecture.Infrastructure\obj\Debug\net
 D:\@NET_API\CleanArchitecture.API\CleanArchitecture.Infrastructure\obj\Debug\net8.0\ref\CleanArchitecture.Infrastructure.dll
 D:\@NET_API\CleanArchitecture.API\CleanArchitecture.Infrastructure\bin\Debug\net8.0\CleanArchitecture.Infrastructure.runtimeconfig.json
 D:\@NET_API\CleanArchitecture.API\CleanArchitecture.Infrastructure\obj\Debug\net8.0\CleanArchitecture.Infrastructure.genruntimeconfig.cache
+D:\@NET_API\CleanArchitecture.API\CleanArchitecture.Infrastructure\obj\Debug\net8.0\CleanArchitecture.Infrastructure.sourcelink.json

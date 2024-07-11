@@ -20,7 +20,7 @@ namespace CleanArchitecture.API.Controllers
             var books = await Mediator().Send(new GetAllBookQuery());
             if (books == null)
             {
-                return NotFound(new {message = "Khong ton tai sach nao!"});
+                return NotFound(new {message = "Khong ton tai san pham nao!"});
             }
             return Ok(books);
         }
@@ -30,7 +30,7 @@ namespace CleanArchitecture.API.Controllers
             var book = await Mediator().Send(new GetBookByIdQuery { BookId = id });
             if (book == null)
             {
-                return NotFound(new { message = "Khong tim thay sach nay!" });
+                return NotFound(new { message = "Khong tim thay sach!" });
             }
             return Ok(new { message = $"Thong tin sach co Id la {id}" , data = book});
         }
@@ -51,7 +51,7 @@ namespace CleanArchitecture.API.Controllers
 
             await Mediator().Send(updateBookDto);
 
-            return Ok(new { message = "Cap nhat thanh cong!" });
+            return Ok(new { message = $"Cap nhat sach {id} thanh cong!" });
         }
 
         [HttpDelete("{id}")]
@@ -59,7 +59,7 @@ namespace CleanArchitecture.API.Controllers
         {
             await Mediator().Send(new DeleteBookCommand { BookId = id });
 
-            return Ok(new {message = "Xoa thanh cong!"});
+            return Ok(new {message = $"Xoa thanh cong sach {id}"});
         }
     }
 }

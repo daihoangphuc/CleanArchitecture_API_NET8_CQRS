@@ -19,10 +19,11 @@ namespace CleanArchitecture.Application.Common.Mappings
              .ForMember(dest => dest.BookAuthor, opt => opt.Ignore())
              .ReverseMap();
 
-            CreateMap<CreateBookCommand, Book>()
+            CreateMap<CreateBookCommand, BookDTO>()
              .ForMember(dest => dest.BookTitle, opt => opt.Ignore())
              .ForMember(dest => dest.BookDescription, opt => opt.Ignore())
              .ForMember(dest => dest.BookAuthor, opt => opt.Ignore());
+
 
             CreateMap<UpdateBookCommand, Book>()
             .ForMember(dest => dest.BookTitle, opt => opt.Condition(src => src.BookTitle != null))
