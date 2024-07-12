@@ -14,21 +14,27 @@ namespace CleanArchitecture.Application.Common.Mappings
         public AutoMapperProfile()
         {
             CreateMap<BookDTO, Book>()
+             .ForMember(dest => dest.BookId, opt => opt.Ignore())
              .ForMember(dest => dest.BookTitle, opt => opt.Ignore())
              .ForMember(dest => dest.BookDescription, opt => opt.Ignore())
              .ForMember(dest => dest.BookAuthor, opt => opt.Ignore())
+             .ForMember(dest => dest.BookPrice, opt => opt.Ignore())
              .ReverseMap();
 
             CreateMap<CreateBookCommand, BookDTO>()
+             .ForMember(dest => dest.BookId, opt => opt.Ignore())
              .ForMember(dest => dest.BookTitle, opt => opt.Ignore())
              .ForMember(dest => dest.BookDescription, opt => opt.Ignore())
-             .ForMember(dest => dest.BookAuthor, opt => opt.Ignore());
+             .ForMember(dest => dest.BookAuthor, opt => opt.Ignore())
+             .ForMember(dest => dest.BookPrice, opt => opt.Ignore());
 
 
             CreateMap<UpdateBookCommand, Book>()
-            .ForMember(dest => dest.BookTitle, opt => opt.Condition(src => src.BookTitle != null))
-            .ForMember(dest => dest.BookDescription, opt => opt.Condition(src => src.BookDescription != null))
-            .ForMember(dest => dest.BookAuthor, opt => opt.Condition(src => src.BookAuthor != null))
+             .ForMember(dest => dest.BookId, opt => opt.Ignore())
+            .ForMember(dest => dest.BookTitle, opt => opt.Ignore())
+            .ForMember(dest => dest.BookDescription, opt => opt.Ignore())
+            .ForMember(dest => dest.BookAuthor, opt => opt.Ignore())
+            .ForMember(dest => dest.BookPrice, opt => opt.Ignore())
             .ConvertUsing(new NullValueIgnoringConverter<UpdateBookCommand, Book>());
         }
     }

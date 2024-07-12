@@ -15,6 +15,7 @@ namespace CleanArchitecture.Application.Books.Commands.UpdateBook
             RuleFor(x => x.BookTitle).MaximumLength(200).WithMessage("Tieu de sach toi da 200 ki tu!");
             RuleFor(x => x.BookDescription).MaximumLength(2000).WithMessage("Mo ta sach toi da 2000 ki tu!");
             RuleFor(x => x.BookAuthor).MaximumLength(200).WithMessage("Tac gia sach toi da 200 ki tu!");
+            RuleFor(x => x.BookPrice).GreaterThanOrEqualTo(0).WithMessage("So tien phai lon hon 0");
         }
 
     }

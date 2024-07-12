@@ -20,6 +20,8 @@ namespace CleanArchitecture.Application.Books.Commands.CreateBook
             RuleFor(v => v.BookAuthor)
                 .MaximumLength(200).WithMessage("Tac gia sach toi da 200 ki tu!")
                 .NotEmpty();
+            RuleFor(x => x.BookPrice).GreaterThanOrEqualTo(0).WithMessage("So tien phai lon hon 0");
+
         }   
     }
 }

@@ -24,11 +24,11 @@ namespace CleanArchitecture.Infrastructure.Repositories
             return book;
         }
 
-        public Task DeleteBookAsync(int id)
+        public async Task DeleteBookAsync(int id)
         {
-            return _dbContext.Books
-                .Where(b => b.BookId == id)
-                .ExecuteDeleteAsync();
+            await _dbContext.Books.Where(b => b.BookId == id).ExecuteDeleteAsync();
+            await _dbContext.SaveChangesAsync();
+            _dbContext.Database.ExecuteSqlRaw($"DBCC CHECKIDENT ('Books', RESEED, {id-1});");
         }
 
         public async Task<IEnumerable<Book>> GetAllBookAsync()
@@ -38,9 +38,7 @@ namespace CleanArchitecture.Infrastructure.Repositories
 
         public async Task<Book> GetBookByIdAsync(int id)
         {
-            return await _dbContext.Books
-                .Where(b => b.BookId == id)
-                .FirstOrDefaultAsync();
+            return await _dbContext.Books.Where(b => b.BookId == id).FirstOrDefaultAsync();
         }
 
         public async Task SaveChangesAsync()
@@ -50,12 +48,8 @@ namespace CleanArchitecture.Infrastructure.Repositories
 
         public async Task UpdateBook(Book book)
         {
-            await _dbContext.Books
-                .Where(b => b.BookId == book.BookId)
-                .ExecuteUpdateAsync(update => update
-                    .SetProperty(b => b.BookTitle, book.BookTitle)
-                    .SetProperty(b => b.BookDescription, book.BookDescription)
-                    .SetProperty(b => b.BookAuthor, book.BookAuthor));
+             _dbContext.Books.Update(book);
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

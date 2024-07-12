@@ -26,7 +26,8 @@ namespace CleanArchitecture.Application.Books.Commands.CreateBook
             {
                 BookTitle = request.BookTitle,
                 BookDescription = request.BookDescription,
-                BookAuthor = request.BookAuthor
+                BookAuthor = request.BookAuthor,
+                BookPrice = request.BookPrice
             };
             await _bookrepository.AddBookAsync(newbook);
             return _mapper.Map<BookDTO>(newbook);

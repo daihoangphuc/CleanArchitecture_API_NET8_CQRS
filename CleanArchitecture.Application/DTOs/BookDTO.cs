@@ -12,5 +12,7 @@ namespace CleanArchitecture.Application.DTOs
         public string? BookTitle { get; set; }
         public string? BookDescription { get; set; }
         public string? BookAuthor { get; set; }
+        public decimal BookPrice { get; set; }
+
     }
 }
